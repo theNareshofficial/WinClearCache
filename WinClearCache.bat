@@ -3,24 +3,33 @@
 :: Check if the script is running with administrative privileges
 net session >nul 2>&1
 if %errorLevel% neq 0 (
+    echo +---------------------------+
+    echo *    WinClearCache Tool     +
+    echo +---------------------------+
     echo.
-    echo -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    echo *    WinClearCache Tool     *
-    echo -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    echo                Author  : Naresh
+    echo                Github  : https://github.com/theNareshofficial
+    echo                Website : http://thenareshofficial.free.nf/
     echo.
-    echo [!] Admin Access is not Available
-    echo [!] Try to open in Administrator mode
-    echo [!] Exiting...
+    echo +-----------------------------------------------------------+
+    echo + [!] Note!!!                                               +    
+    echo +  This script is not running in Administration Privileges. + 
+    echo +  This is only running in administrator mode.              +
+    echo +  Run this script in "Run as Administrator"                +
+    echo +                                              - By Naresh  +
+    echo +-----------------------------------------------------------+
     echo.
     pause
     exit /b
+
 ) else (
+    echo +---------------------------+
+    echo *    WinClearCache Tool     +
+    echo +---------------------------+
     echo.
-    echo -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    echo *    WinClearCache Tool     *
-    echo -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    echo.
-    echo [+] Admin Access is Available...
+    echo                Author  : Naresh
+    echo                Github  : https://github.com/theNareshofficial
+    echo                Website : http://thenareshofficial.free.nf/
     echo.
 
     :: Delete Windows temporary files and directories
@@ -205,5 +214,6 @@ if %errorLevel% neq 0 (
     echo ******************************
     echo.
 
-    pause         
+    pause
+    
 )
