@@ -12,6 +12,7 @@ WinClearCache is a comprehensive Windows cleaning tool designed to remove tempor
 - Deletes Windows Event Logs
 - Clears Windows Thumbnail cache
 - Deletes all System Restore points
+- Emptie the Recycle Bin
 
 ## Usage
 
