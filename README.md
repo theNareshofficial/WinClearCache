@@ -1,8 +1,13 @@
-<h1 align="center"> WinClearCache Tool </h1>
 
-WinClearCache is a comprehensive Windows cleaning tool designed to remove temporary files, cache files, and various other types of unnecessary data to free up disk space and enhance system performance. This tool is now available as an executable application, making it even easier to keep your Windows environment clutter-free and optimized.
+<p align="center">
+            <img src="assests/WinCleat-Cache-logo.png" width="300px">
+</p>
 
-## Features
+<h1 align="center"> WinClearCache Tool</h1>
+
+**WinClearCache** is a comprehensive Windows cleaning tool designed to remove temporary files, cache files, and various other types of unnecessary data to free up disk space and enhance system performance. This tool is now available as an **executable application**, making it even easier to keep your Windows environment clutter-free and optimized.
+
+## Features🎯
 
 - Deletes Windows temporary files
 - Clears Windows Update cache
@@ -14,18 +19,16 @@ WinClearCache is a comprehensive Windows cleaning tool designed to remove tempor
 - Deletes all System Restore points
 - Empties the Recycle Bin
 
-## Usage
+## Usage💭
 
 1. **Download the Application**: Download the WinClearCache executable from the provided link.
 2. **Run as Administrator**: Ensure WinClearCache is executed with administrative privileges for full functionality.
 3. **Execution**: Simply double-click the downloaded executable to run the application.
 4. **Review Output**: After execution, review the output messages to verify the actions performed by WinClearCache.
 
-### Download
+### Download⤵️
 
 - [Download WinClearCache.exe](https://github.com/theNareshofficial/WinClearCache/blob/main/WinClearCache.exe) (Replace with the actual download link)
-
-## Cleaning Tasks
 
 ### Deleting Windows Temporary Files
 
@@ -98,22 +101,24 @@ The application removes all system restore points to free up disk space and prev
 
 - Command: `vssadmin delete shadows /for=%SystemDrive% /all /quiet`
 
-## Notes
+## Notes📝
 
 - Running this application will permanently delete files and cannot be undone. Ensure you do not need the files before running the application.
 - The application may not delete files that are in use by other applications. Close any running applications to allow the application to clean effectively.
 - This tool is intended for advanced users who understand the implications of deleting system and temporary files.
 
-## Author
+## Author👨‍💻
 
 - **Name**: Naresh
 - **GitHub**: [theNareshofficial](https://github.com/theNareshofficial)
 - **Website**: [thenareshofficial.free.nf](http://thenareshofficial.free.nf/)
 
-## Contributing
+## Contributing🤝
 
 Please feel free to submit issues or pull requests to improve the functionality and efficiency of this application.
 
-## Acknowledgements
+## Acknowledgements📒
 
 This tool was developed to provide a convenient way to clean up Windows systems, improving performance and freeing up valuable disk space.
+
+<h1 align="center">ThankYou🎉</h1>
