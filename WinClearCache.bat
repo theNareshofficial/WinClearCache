@@ -5,6 +5,7 @@ cls
 
 :: Color change
 color a
+
 :: Check if the script is running with administrative privileges
 net session >nul 2>&1
 if %errorLevel% neq 0 (
@@ -15,6 +16,8 @@ if %errorLevel% neq 0 (
     echo                Author  : Naresh
     echo                Github  : https://github.com/theNareshofficial
     echo                Website : http://thenareshofficial.free.nf/
+    echo.
+    echo Hello %USERNAME%
     echo.
     echo +-----------------------------------------------------------+
     echo + [!] Note!!!                                               +    
@@ -35,7 +38,8 @@ if %errorLevel% neq 0 (
     echo                Github  : https://github.com/theNareshofficial
     echo                Website : http://thenareshofficial.free.nf/
     echo.
-
+    echo Hello %USERNAME%
+    echo.
     echo [+] Deleting...
     echo.
     echo [+] Delete Windows temporary files
