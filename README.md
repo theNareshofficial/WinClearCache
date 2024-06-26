@@ -1,6 +1,6 @@
 
 <p align="center">
-            <img src="assests/WinCleat-Cache-logo.png" width="300px">
+            <img src="assets/WinCleat-Cache-logo.png" width="300px">
 </p>
 
 <h1 align="center"> WinClearCache Tool</h1>
