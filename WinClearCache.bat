@@ -1,14 +1,15 @@
 @echo off
 
-:: clear screen
+:: Clear screen
 cls
 
-:: Color change
+:: Set console text color to green
 color a
 
 :: Check if the script is running with administrative privileges
 net session >nul 2>&1
 if %errorLevel% neq 0 (
+    :: Display message if not running with administrative privileges
     echo +---------------------------+
     echo *    WinClearCache Tool     +
     echo +---------------------------+
@@ -19,17 +20,17 @@ if %errorLevel% neq 0 (
     echo.
     echo Hello %USERNAME%
     echo.
-    echo +-----------------------------------------------------------+
-    echo + [!] Note!!!                                               +    
-    echo +  This script is not running in Administration Privileges. + 
-    echo +  This is only running in administrator mode.              +
-    echo +  Run this script in "Run as Administrator"                +
-    echo +                                              - By Naresh  +
-    echo +-----------------------------------------------------------+
+    echo +-------------------------------------------------------------+
+    echo + [!] Note!!!                                                 +    
+    echo +  This script is not running with administrative privileges. + 
+    echo +  Please run this script as an administrator.                +
+    echo +                                              - By Naresh    +
+    echo +-------------------------------------------------------------+
     echo.
     pause
     exit /b
 ) else (
+    :: Display message if running with administrative privileges
     echo +---------------------------+
     echo *    WinClearCache Tool     +
     echo +---------------------------+
@@ -40,20 +41,8 @@ if %errorLevel% neq 0 (
     echo.
     echo Hello %USERNAME%
     echo.
-    echo [+] Deleting...
+    echo [+] Deleting cache and temporary files...
     echo.
-    echo [+] Delete Windows temporary files
-    echo [+] Delete Windows cache files
-    echo [+] Clear Windows Update cache
-    echo [+] Clean Windows Prefetch files
-    echo [+] Remove Internet Explorer temporary files
-    echo [+] Clear browser caches for Chrome, Firefox, Edge, Opera, and Safari
-    echo [+] Delete Windows Event Logs
-    echo [+] Clear Windows Thumbnail cache
-    echo [+] Delete all System Restore points
-    echo [+] Emptie the Recycle Bin
-    echo.
-    pause
 
     :: Delete Windows temporary files and directories
     echo [!] Checking if "%TEMP%" exists...
@@ -106,7 +95,6 @@ if %errorLevel% neq 0 (
     :: Clean Recycle Bin using PowerShell
     echo [+] Cleaning Recycle Bin...
     powershell -command "Clear-RecycleBin -Force"
-
 
     :: Cleaning Internet Explorer temporary files
     echo [+] Cleaning Internet Explorer temporary files...
