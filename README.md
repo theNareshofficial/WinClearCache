@@ -1,124 +1,233 @@
-
 <p align="center">
-            <img src="assets/WinCleat-Cache-logo.png" width="300px">
+    <img src="assets/WinCleat-Cache-logo.png" width="300px">
 </p>
+<h1 align="center">WinClearCache Tool v2.0</h1>
 
-<h1 align="center"> WinClearCache Tool</h1>
+![Version](https://img.shields.io/badge/version-2.0-blue.svg?style=flat-square)
+![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.6+-3776AB?style=flat-square&logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/status-Production%20Ready-brightgreen.svg?style=flat-square)
+![Maintenance](https://img.shields.io/badge/maintenance-Active-blue.svg?style=flat-square)
 
-**WinClearCache** is a comprehensive Windows cleaning tool designed to remove temporary files, cache files, and various other types of unnecessary data to free up disk space and enhance system performance. This tool is now available as an **executable application**, making it even easier to keep your Windows environment clutter-free and optimized.
+**WinClearCache** is a fast, lightweight, and comprehensive system optimization tool designed to safely purge temporary files, browser caches, system logs, update files, and recycle bin data. 
 
-## Features🎯
+The primary utility is built natively for Windows as an **Executable (`.exe`)** and **Batch Script (`.bat`)** for instant, dependency-free execution. Additionally, **WinClearCache v2.0** includes a **Python Edition (`WinClearCache.py`)** to extend cross-platform support across **Windows, Linux, and macOS**.
 
-- Deletes Windows temporary files
-- Clears Windows Update cache
-- Cleans Windows Prefetch files
-- Removes Internet Explorer temporary files
-- Clears browser caches for Chrome, Firefox, Edge, Opera, and Safari
-- Deletes Windows Event Logs
-- Clears Windows Thumbnail cache
-- Deletes all System Restore points
-- Empties the Recycle Bin
+---
 
-## Usage💭
+## What's New in v2.0 🚀
 
-1. **Download the Application**: Download the WinClearCache executable from the provided link.
-2. **Run as Administrator**: Ensure WinClearCache is executed with administrative privileges for full functionality.
-3. **Execution**: Simply double-click the downloaded executable to run the application.
-4. **Review Output**: After execution, review the output messages to verify the actions performed by WinClearCache.
+![Features](https://img.shields.io/badge/Features-Enhanced-brightgreen?style=flat-square)
+![Performance](https://img.shields.io/badge/Performance-Optimized-blue?style=flat-square)
+![Stability](https://img.shields.io/badge/Stability-Improved-success?style=flat-square)
 
-### Download⤵️
+- **Core Executable & Batch Updates:**
+  - Real-time live verbose execution output during scans.
+  - Interactive menu with Dry-Run mode to preview file deletions safely.
+  - Fixed space-in-username path bugs (e.g., `C:\Users\spidey\...`).
+  - Absolute path log directory display upon completion.
+  - Enhanced multi-profile browser cache purging.
+- **Cross-Platform Python Module Support:**
+  - Multi-platform support for **Windows**, **Linux**, and **macOS**.
+  - Purges temporary folder contents safely without deleting root system directories.
+  - Integrated disk space analysis using `psutil`.
 
-- [Download WinClearCache.exe](https://github.com/theNareshofficial/WinClearCache/blob/main/WinClearCache.exe) (Download Winclearcache.exe Here)
+---
 
-### Deleting Windows Temporary Files
+## Executables & Downloads ⤵️
 
-The application deletes temporary files from the following directories:
+![Release](https://img.shields.io/badge/Release-v2.0-blue?style=flat-square)
+![Download](https://img.shields.io/badge/Downloads-Multiple%20Formats-brightgreen?style=flat-square)
 
-- `%TEMP%` - User-specific temporary files
-- `%SystemRoot%\Temp` - System-wide temporary files
-- `%USERPROFILE%\AppData\Local\Temp` - Additional user-specific temporary files
+- **Executable Application:** [Download WinClearCache.exe](https://github.com/theNareshofficial/WinClearCache/blob/main/WinClearCache.exe)
+- **Batch Script:** [WinClearCache.bat](https://github.com/theNareshofficial/WinClearCache/blob/main/WinClearCache.bat)
+- **Python Script:** [WinClearCache.py](https://github.com/theNareshofficial/WinClearCache/blob/main/WinClearCache.py)
 
-### Cleaning Windows Update Cache
+---
 
-The application removes cached files related to Windows updates from:
+## Complete Execution Commands Reference ⚙️
 
-- `%SystemRoot%\SoftwareDistribution\Download`
+![Reference](https://img.shields.io/badge/Command-Reference-blue?style=flat-square)
 
-### Cleaning Windows Prefetch Files
+> **Important:** Running with Administrator or Root privileges is strongly recommended to clear system-level folders (such as Windows Update cache, Event Logs, or `/var/log`).
 
-The application deletes prefetch files to free up space and potentially improve boot times:
+### 1. Windows Executable (`WinClearCache.exe`)
 
-- `%SystemRoot%\Prefetch`
+* **Standard Interactive Launch (CMD / PowerShell):**
+  ```cmd
+  WinClearCache.exe
+  ```
 
-### Clearing Internet Explorer Temporary Files
+---
 
-The application uses the `RunDll32` command to clear all Internet Explorer temporary files:
+## ✍️ Author
 
-- Command: `RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 255`
+![Author](https://img.shields.io/badge/Author-Naresh%20R-blue?style=flat-square)
+![GitHub](https://img.shields.io/badge/GitHub-@theNareshofficial-181717?style=flat-square&logo=github&logoColor=white)
+![YouTube](https://img.shields.io/badge/YouTube-@nareshtechweb930-FF0000?style=flat-square&logo=youtube&logoColor=white)
+![Location](https://img.shields.io/badge/Location-Bengaluru%2C%20India-green?style=flat-square)
 
-### Cleaning Browser Caches
+**Naresh R** - Desktop Support Engineer | IT Infrastructure Enthusiast | Content Creator
 
-The application targets cache directories for several popular browsers:
+- **GitHub:** [@theNareshofficial](https://github.com/theNareshofficial)
+- **YouTube:** [@nareshtechweb930](https://www.youtube.com/@nareshtechweb930)
+- **Location:** Bengaluru, Karnataka, India
+- **Philosophy:** Learn → Build → Hack
 
-- **Chrome**:
-  - `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache`
-  - `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Code Cache`
-  - `%LOCALAPPDATA%\Google\Chrome\User Data\Default\GPUCache`
+---
 
-- **Firefox**:
-  - `%APPDATA%\Mozilla\Firefox\Profiles\*\cache2`
-  - `%APPDATA%\Mozilla\Firefox\Profiles\*\startupCache`
+## 🐍 Python Setup with Requirements
 
-- **Edge**:
-  - `%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Cache`
-  - `%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Code Cache`
-  - `%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\GPUCache`
+![Python](https://img.shields.io/badge/Setup-Simple-brightgreen?style=flat-square)
 
-- **Opera**:
-  - `%APPDATA%\Opera Software\Opera Stable\Cache`
-  - `%APPDATA%\Opera Software\Opera Stable\GPUCache`
+### Method 1: Using requirements.txt (Recommended)
 
-- **Safari**:
-  - `%APPDATA%\Apple Computer\Safari\Cache`
-  - `%APPDATA%\Apple Computer\Safari\Webpage Previews`
+```bash
+# Navigate to project directory
+cd WinClearCache
 
-### Clearing Windows Event Logs
+# Install all dependencies from requirements.txt
+pip install -r requirements.txt
 
-The application uses `wevtutil` to clear all Windows Event Logs, freeing up space used by log files:
+# Or with Python 3 explicitly
+pip3 install -r requirements.txt
 
-- Command: `wevtutil el` (list all event logs)
-- Command: `wevtutil cl "logname"` (clear each event log)
+# On Linux/macOS with sudo (if needed)
+sudo pip3 install -r requirements.txt
+```
 
-### Deleting Windows Thumbnail Cache
+### Method 2: Manual Installation
 
-The application deletes thumbnail cache files to free up disk space:
+```bash
+# Install psutil directly
+pip install psutil
 
-- `%LOCALAPPDATA%\Microsoft\Windows\Explorer\thumbcache_*.db`
+# Or specific version
+pip install psutil==5.9.0
+```
 
-### Deleting System Restore Points
+### Verify Installation
 
-The application removes all system restore points to free up disk space and prevent unnecessary backups:
+```bash
+# Check if psutil is installed correctly
+python -c "import psutil; print('psutil version:', psutil.__version__)"
 
-- Command: `vssadmin delete shadows /for=%SystemDrive% /all /quiet`
+# Or with Python 3
+python3 -c "import psutil; print('psutil version:', psutil.__version__)"
+```
 
-## Notes📝
+### Run WinClearCache After Setup
 
-- Running this application will permanently delete files and cannot be undone. Ensure you do not need the files before running the application.
-- The application may not delete files that are in use by other applications. Close any running applications to allow the application to clean effectively.
-- This tool is intended for advanced users who understand the implications of deleting system and temporary files.
+```bash
+# Windows
+python WinClearCache.py --full
 
-## Author👨‍💻
+# Linux/macOS
+python3 WinClearCache.py --full
 
-- **Name**: Naresh
-- **GitHub**: [theNareshofficial](https://github.com/theNareshofficial)
-- **Website**: [thenareshofficial.free.nf](http://thenareshofficial.free.nf/)
+# With verbose output
+python WinClearCache.py --full --verbose
+```
 
-## Contributing🤝
+---
 
-Please feel free to submit issues or pull requests to improve the functionality and efficiency of this application.
+## 🤝 Contributing
 
-## Acknowledgements📒
+![Contribute](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-success?style=flat-square)
 
-This tool was developed to provide a convenient way to clean up Windows systems, improving performance and freeing up valuable disk space.
+We warmly welcome contributions from the community! Whether you're fixing bugs, adding features, improving documentation, or sharing ideas, your contribution matters.
 
-<h1 align="center">ThankYou🎉</h1>
+### How to Contribute
+
+1. **Fork the Repository**
+   ```bash
+   # Click "Fork" on GitHub to create your copy
+   ```
+
+2. **Clone Your Fork**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/WinClearCache.git
+   cd WinClearCache
+   ```
+
+3. **Create a Feature Branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   # Example: feature/add-custom-folder-cleanup
+   ```
+
+4. **Make Your Changes**
+   - Fix bugs
+   - Add new features
+   - Improve documentation
+   - Optimize code
+
+5. **Test Your Changes**
+   ```bash
+   # Test with dry-run first
+   python WinClearCache.py --dry-run
+   
+   # Test full functionality
+   python WinClearCache.py --full --verbose
+   ```
+
+6. **Commit Your Changes**
+   ```bash
+   git commit -m "Add: meaningful description of your changes"
+   # Examples:
+   # git commit -m "Add: support for Chrome profile cleanup"
+   # git commit -m "Fix: permission denied on system temp files"
+   # git commit -m "Improve: documentation clarity"
+   ```
+
+7. **Push to Your Branch**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+8. **Create a Pull Request**
+   - Go to GitHub and open a Pull Request
+   - Describe your changes clearly
+   - Link any related issues
+
+### Contribution Guidelines
+
+- **Bug Reports:** Include error messages, OS version, and reproduction steps
+- **Feature Requests:** Explain the use case and expected behavior
+- **Code Quality:** Keep code clean, readable, and well-commented
+- **Testing:** Test your changes on Windows, Linux, and macOS if possible
+- **Documentation:** Update README and comments for new features
+
+### Areas for Contribution
+
+- ![Bug Fix](https://img.shields.io/badge/Bug-Fixes-red?style=flat-square) Bug fixes and error handling
+- ![Feature](https://img.shields.io/badge/Feature-Requests-blue?style=flat-square) New cleanup targets and features
+- ![Docs](https://img.shields.io/badge/Documentation-Improvement-green?style=flat-square) Better documentation and tutorials
+- ![Testing](https://img.shields.io/badge/Testing-Help-yellow?style=flat-square) Cross-platform testing and feedback
+- ![Localization](https://img.shields.io/badge/Localization-Languages-purple?style=flat-square) International language support
+
+### Questions or Ideas?
+
+- **Open an Issue:** For bugs or feature discussions
+- **Start a Discussion:** For questions or ideas
+- **Contact:** Reach out on GitHub or YouTube
+
+---
+
+## 🙏 Thank You
+
+![Thank You](https://img.shields.io/badge/Thank%20You-Heart-red?style=flat-square)
+
+
+**Special thanks to the open source community** for inspiration, guidance, and the amazing tools that make projects like this possible.
+
+Every contribution, no matter how small, makes a difference. Thank you for being part of the WinClearCache journey! 
+
+---
+
+**Happy Cleaning! 🧹**
+
+![Made With Love](https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026-blue?style=flat-square)
+
